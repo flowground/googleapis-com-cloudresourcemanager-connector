@@ -1,0 +1,77 @@
+{
+    "type": "object",
+    "properties": {
+        "parent": {
+            "type": "string"
+        },
+        "access_token": {
+            "type": "string"
+        },
+        "alt": {
+            "type": "string",
+            "enum": [
+                "json",
+                "media",
+                "proto"
+            ],
+            "default": "json"
+        },
+        "callback": {
+            "type": "string"
+        },
+        "fields": {
+            "type": "string"
+        },
+        "key": {
+            "type": "string"
+        },
+        "oauth_token": {
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "uploadType": {
+            "type": "string"
+        },
+        "upload_protocol": {
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "A Folder in an Organization's resource hierarchy, used to\norganize that Organization's resources.",
+            "properties": {
+                "createTime": {
+                    "description": "Output only. Timestamp when the Folder was created. Assigned by the server.",
+                    "format": "google-datetime",
+                    "type": "string"
+                },
+                "displayName": {
+                    "description": "The folder’s display name.\nA folder’s display name must be unique amongst its siblings, e.g.\nno two folders with the same parent can share the same display name.\nThe display name must start and end with a letter or digit, may contain\nletters, digits, spaces, hyphens and underscores and can be no longer\nthan 30 characters. This is captured by the regular expression:\n[\\p{L}\\p{N}]([\\p{L}\\p{N}_- ]{0,28}[\\p{L}\\p{N}])?.",
+                    "type": "string"
+                },
+                "lifecycleState": {
+                    "description": "Output only.  The lifecycle state of the folder.\nUpdates to the lifecycle_state must be performed via\nDeleteFolder and\nUndeleteFolder.",
+                    "enum": [
+                        "LIFECYCLE_STATE_UNSPECIFIED",
+                        "ACTIVE",
+                        "DELETE_REQUESTED"
+                    ],
+                    "type": "string"
+                },
+                "name": {
+                    "description": "Output only. The resource name of the Folder.\nIts format is `folders/{folder_id}`, for example: \"folders/1234\".",
+                    "type": "string"
+                },
+                "parent": {
+                    "description": "The Folder’s parent's resource name.\nUpdates to the folder's parent must be performed via\nMoveFolder.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

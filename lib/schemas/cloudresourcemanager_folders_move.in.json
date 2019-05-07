@@ -1,0 +1,56 @@
+{
+    "type": "object",
+    "properties": {
+        "name": {
+            "required": true,
+            "type": "string"
+        },
+        "access_token": {
+            "type": "string"
+        },
+        "alt": {
+            "type": "string",
+            "enum": [
+                "json",
+                "media",
+                "proto"
+            ],
+            "default": "json"
+        },
+        "callback": {
+            "type": "string"
+        },
+        "fields": {
+            "type": "string"
+        },
+        "key": {
+            "type": "string"
+        },
+        "oauth_token": {
+            "type": "string"
+        },
+        "prettyPrint": {
+            "type": "boolean",
+            "default": true
+        },
+        "quotaUser": {
+            "type": "string"
+        },
+        "uploadType": {
+            "type": "string"
+        },
+        "upload_protocol": {
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "The MoveFolder request message.",
+            "properties": {
+                "destinationParent": {
+                    "description": "The resource name of the Folder or Organization to reparent\nthe folder under.\nMust be of the form `folders/{folder_id}` or `organizations/{org_id}`.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}
